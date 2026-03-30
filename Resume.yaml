@@ -1,0 +1,132 @@
+cv:
+  name: Shafiq Ahmad
+  headline: Lead Software Engineer | Distributed Systems | Platform Architecture
+  location: Munich, Germany
+  email: ahmad2smile@protonmail.com
+  website: https://shafiqahmad.com/
+  social_networks:
+    - network: LinkedIn
+      username: ahmad2shafiq
+    - network: GitHub
+      username: ahmad2smile
+  sections:
+    Summary:
+      - Electronics Engineer turned Software Engineer with about 11 years of experience across software development, architecture, and technical planning.
+      - Experienced across the full project lifecycle, including client negotiations, requirements management, technical planning, development, and client onboarding.
+      - Worked effectively as an individual contributor, solo engineer, and team lead for more than 5 years with clients across Asia, Australia, Europe, and the USA.
+    Experience:
+      - company: AlgoMinds GmbH
+        position: Lead Software Engineer
+        location: Dusseldorf, Germany
+        start_date: 2024-10
+        end_date: present
+        summary: Leading platform and distributed systems work across internal developer tooling and international energy-sector delivery.
+        highlights:
+          - "DevSpells: built an internal solution comparable to .NET Aspire that extends microservice setup with development and testing boilerplate, DevOps support, and multi-cloud or on-prem deployment workflows."
+          - "Worked as a solo researcher to enable rootless Docker-in-Docker Ubuntu containers for Azure DevOps self-hosted agents, requiring deep Linux systems work across SELinux, AppArmor, device mounts, syscalls, and kernel differences between WSL and standard Debian-like distributions."
+          - "Implemented ACID emulation for MongoDB through .NET transaction scopes to provide a more database-agnostic persistence interface."
+          - "Presented DevSpells at Gitex Berlin as a developer advocate and sales representative."
+          - "Omnivise Ecosystems: worked on a multi-continent Siemens Energy initiative to centralize renewable energy asset monitoring and control across international teams."
+          - "Led a team of four engineers, aligned multiple teams across the organization, supported PI planning, and prepared throughput tests for MQTT brokers and the broader data pipeline up to 1M messages per second."
+          - "Built HMIs and data collection functionality on Inductive Automation Ignition using Java and Kotlin, and ported a legacy Java client for an in-house time-series database with a custom stateful transport protocol to .NET."
+      - company: Nyris GmbH
+        position: Senior Software Engineer
+        location: Berlin, Germany
+        start_date: 2022-04
+        end_date: 2024-10
+        summary: Worked in R&D and production engineering, led cross-functional delivery, and handled technically demanding customer onboarding.
+        highlights:
+          - "Led and coordinated one of the company's largest customer onboardings by shaping technical strategy for data ingestion under strict security and infrastructure requirements."
+          - "Data Orchestrator: designed the initial architecture for a new Kafka-based data import system using Kubernetes KEDA, Rust workers, and gRPC with the goal of scaling throughput from 18 million messages per month to 1 billion."
+          - "Built the full proof of concept for Data Orchestrator as a solo contributor and then onboarded two additional engineers after the approach was approved for production use."
+          - "Reporting System: led the project from proof of concept through planning, architecture, and delivery for a TDengine-based reporting pipeline that ingested 1 billion messages in 10 minutes and replaced a legacy sequential system."
+          - "Algebraic Search: worked closely with management on SIMD and vector-processing proofs of concept in .NET and C#, including generalized AVX vector loading strategies, direct execution of compiled assembly bytecode, memory-loading experiments, cache-hit strategies, CPU latency comparisons, and pointer arithmetic studies."
+          - "CRDT Database: took ownership of the Observed-Remove Set implementation, researched the Efficient Synchronization of State-based CRDTs paper, and implemented Delta OR-set synchronization with tombstones, which became the basis for broader system data types."
+          - "Built a strongly typed ID generation library using .NET source generators and a code styling and formatting package inspired by Microsoft.CodeAnalysis, both of which were adopted across the company."
+          - "Inquisitor: evaluated Qdrant as a short-term replacement for MemSQL and SingleStore, built a minimal MVP search system with a comparison UI, presented the proof of concept company-wide, and helped drive adoption into production."
+      - company: CELUS (Contunity GmbH)
+        position: Senior Software Engineer
+        location: Munich, Germany
+        start_date: 2020-04
+        end_date: 2022-03
+        summary: Drove architecture and delivery in a fast-moving startup while modernizing the frontend stack and improving engineering rigor.
+        highlights:
+          - "Led the migration from Angular to React, established application architecture, guidelines, and best practices, and introduced more rigorous testing from unit to end-to-end coverage."
+          - "CELUS Platform: worked across a service-oriented platform for electronics engineers using React, TypeScript, Express, Flask, MongoDB, Airflow, RabbitMQ, and Docker Swarm."
+          - "Refactored the legacy Angular application to React, set up the React and Redux application architecture, moved forms to Formik with Yup validation, simplified the JointJS-based schematics architecture, and designed the Express TypeScript BFF."
+          - "Added backend APIs in Flask, improved Docker images for multiple services, and contributed to overall service boundary and architecture decisions."
+          - "Xandria: created an internal search tool during CodeZen using Playwright-based scraping, React, NestJS, PostgreSQL, and Elasticsearch; also proved the viability of Keycloak as an auth proxy gateway, which was later adopted more broadly."
+          - "Local Deployment: built internal tooling to run the full platform stack locally in Docker Swarm, restore databases, and swap swarm services with development containers so teammates could start working on any service within seconds."
+          - "Terraform and Ansible Scripts: created automation to provision EC2 development machines and bootstrap the internal stack, initially for personal use and later adopted after observing repeated brute-force attempts in auth logs."
+      - company: Oozou Pvt Ltd.
+        position: Software Engineer
+        location: Bangkok, Thailand
+        start_date: 2019-04
+        end_date: 2019-11
+        summary: Worked in a consultancy environment with direct client collaboration and technical participation in solution and pitch discussions.
+        highlights:
+          - "TrueYou: contributed to a combined landing page and subscription management platform for Thailand's largest ISP and VAS provider using React, Next.js, Express, Redis, and Docker."
+          - "Improved project architecture toward a more inheritance-based component model to better align with React's atomic design approach."
+          - "Performed Lighthouse audits and improved page-load performance through lazy image loading with the Intersection API and brotli and gzip compression for build assets."
+      - company: UNIT23
+        position: Lead Software Engineer
+        location: Lahore, Pakistan
+        start_date: 2015-12
+        end_date: 2019-03
+        summary: Joined as a senior engineer, then formally led a team migrating a legacy stack to modern web and mobile platforms.
+        highlights:
+          - "Led the migration of an older PHP and Ember application to a React, Node.js, and TypeScript stack and brought a team of four senior engineers and one junior engineer up to speed on the new platform, Docker, and CircleCI workflows."
+          - "Scheduling+ Web: led refactoring of the employee management platform for Ace Hardware, Epicor, and other clients using React, Redux, Redux-Saga, TypeScript, GraphQL, REST, Sequelize, MySQL, and Docker."
+          - "Improved developer experience with linting, Prettier, and pull request practices; introduced Jest unit testing, Puppeteer end-to-end testing, GraphQL for read APIs, and CircleCI-based CI/CD."
+          - "Scheduling+ App: led cross-platform mobile work in React Native for iOS and Android, introduced Jest and Detox, and improved release automation with Fastlane for screenshots, signing, production builds, and app publishing."
+          - "Scheduling+ Timeclock App: maintained and extended the iOS and iPad time-in and time-out application and improved production build tooling with Fastlane."
+          - "Scheduling+ Timeclock App Revamp: redesigned the application as a solo developer with Xamarin Forms, CQRS, and Redux.NET, and implemented face detection with the OpenCV C++ API through native interop across Xamarin.iOS, Xamarin.Android, and Xamarin.UWP."
+      - company: eConceptions
+        position: Associate Software Engineer
+        location: Islamabad, Pakistan
+        start_date: 2015-01
+        end_date: 2015-12
+        summary: Started as a junior mobile engineer working with senior engineers on international client projects across mobile and web.
+        highlights:
+          - "Marhaba eStore: introduced React Native as a replacement for Ionic as a solo contributor for an e-commerce client in the UAE."
+          - "Careem Pitstop: improved responsiveness with Cordova native plugins and pushed animations closer to 60fps by using native lists and Cordova integrations."
+          - "Exalted Solutions: improved project structure on a jQuery and ASP.NET codebase, implemented reusable utility methods, refactored API services, and added a repository pattern on the backend."
+    Tech Overview:
+      - label: Languages
+        details: C#, C++, Go, JavaScript, TypeScript
+      - label: Backend
+        details: ASP.NET Core, Entity Framework, MVC, MVVM, Redux.NET, Rx.NET, GraphQL, HotChocolate, SQL Server, MySQL, PostgreSQL, RabbitMQ, Kafka, Airflow, Elasticsearch, CRDTs, gRPC, REST
+      - label: Frontend
+        details: ReactJS, Redux, Redux-Saga, Redux-Forms, Formik, React Hook Form, Styled-Components, ReactJSS, Material UI, Moment.js, i18n, GraphQL, REST, Jest, Playwright, Next.js, Angular, NgRx, RxJS, JointJS
+      - label: DevOps
+        details: Docker, Docker Swarm, Docker Compose, Azure, AWS, GCP, Terraform, Ansible, Portainer, KVM, GitHub Actions, GitLab Pipelines, Azure DevOps, Visual Studio App Center, CircleCI
+      - label: Mobile
+        details: React Native, Redux, Redux-Saga, Fastlane, Detox, Xamarin Forms, MVVM, Redux.NET, Ionic, Angular, RxJS, Cordova, OpenCV with C++ API for face detection
+      - label: Operating Systems
+        details: Debian Linux (primary), Arch, Ubuntu, Windows, Mac
+    Open Source Contributions:
+      - bullet: KurzSharp - quick API prototyping library.
+      - bullet: Face Detection with OpenCV - Haar cascades with the C++ API.
+      - bullet: SHA256 Cryptographic Processor - FPGA implementation in Verilog.
+      - bullet: React Native docs update - added missing documentation for viewabilityConfig.
+      - bullet: Delta Modulation Wikipedia - added output signal power math for signal processing.
+      - bullet: asm-dom-boilerplate - improved tooling for hot reload with Nodemon.
+      - bullet: yup - contributed a feature to differentiate between positive and negative zero for a project need.
+    Interests:
+      - bullet: Play Dota 2 more than I should.
+      - bullet: Sci-fi theories.
+      - bullet: History and nature of different languages.
+      - bullet: Learning about different cultures and the impact of historical events on societies.
+      - bullet: History of different civilizations.
+      - bullet: Geopolitics.
+      - bullet: Human psychology.
+      - bullet: Philosophy.
+      - bullet: Quantum physics, Newtonian physics, and the implications of compute power growth for artificial intelligence.
+    Human Languages:
+      - label: Fluent
+        details: English, Urdu, Punjabi, Siraiki
+      - label: Basic
+        details: German
+
+design:
+  theme: engineeringclassic

@@ -1,0 +1,309 @@
+
+
+
+
+PREFACE
+Electronics Engineer turned Software Engineer with about 11 years of experience in Software Development, Architecture, Planning. Experienced in all phases of project lifecycle, including Client Negotiations, Requirements Management, Technical Planning, Development, and Client on-boarding. Worked as a team player, solo engineer, and Team Lead (5+ years), with a proven track record of work with clients across Asia, Australia, Europe, and the USA in diverse cultural settings and even being Developer Advocate/Sales Representative at Gitex Berlin.
+
+PROFESSIONAL EXPERIENCE
+AlgoMinds GmbH, Düsseldorf, Germany
+Lead Software Engineer
+10/2024 - Current
+Intro: 
+Projects:
+
+DevSpells
+Intro: In house Solution similar to .Net Aspire, which extends on functionality to support Micro Services, Adds Development and Testing boilerplate and utilities, DevOps and multi Cloud and on-prem Deployments.
+·	Technology:Used a wide range of technologies from Pulumi IaC, gRPC, GraphQL, MongoDb, Postgres, OpenTelemetry and other utilities for Testing and Mocking like testcontainers.
+·	Contributions: 
+- Worked as a solo researcher to setup Rootless Docker-in-Docker Ubuntu Container for Azure DevOps Pipeline’s self-hosted Agent, Required a lot of research into Linux systems like SELinux, Apparmor, device mounts and their relation to syscalls and especially Kernel differences b/w WSL and normal Distros like Debian.
+- Implemented ACID emulation for MongoDb with .NET platform level Transaction scopes which in the end provides uses Database agnostic persistence storage interface.
+- Presented DevSpells at Gitex Berlin as Developer Advocate/Sales Representative.
+OmniviseEcosystems
+Intro: Multiple continent spanning project with multiple international teams to centralize Renewable Energy Assets monitoring and control for Siemens Energy.
+·	Technology:Extremely wide range of technology was used from BoschRexroth IoT to Inductive Automation Ignition for HMIs, with Aws IoT Core MQTT as transport layer.
+·	Contributions: 
+- Worked as Project Owner to connect different team across organization to combine existing solution for data aggregation and analytics.
+- Lead a team of four people as Technical Lead to present team progress and plans to the Management on the Business side.
+- Seldomly assumed the role of Project Manager to come up with a plan and commitment with my team members in Organization wide Project Increment (PI) Planning which is like Agile’s SAFe Framework event to all the business stakeholders. Which also involved negotiating and balancing expectations of different teams, other project managers and business stakeholder.
+- Worked on Inductive Automation Ignition platform for HMIs and data collection by writing Java/Kotlin based plugging.
+- Prepared Tests and mechanism to Test MQTT brokers for the required throughput of 1M msgs/second along with our whole data pipeline.
+- Ported legacy Java Client for in-house Time-Series Database with custom Stateful Transport Protocol to .NET.
+
+Nyris GmbH Berlin, Germany
+Senior Software Engineer
+04/2022 - 10/2024
+Intro: Worked with and Lead a Cross Functional Team. Initially collaborated in R&D with other senior engineers and worked on Vector based Database Search and Distributed Systems with focused on Performance optimizations. Eventually took over the project and Lead other Senior and Junior Engineers.
+Lead charge to on-board one of our biggest customer with Technical Strategies and by taking care of the Customer’s technical requirements regarding bringing in their data while adhering to specialized Security and Infrastructure requirements.
+Projects:
+
+Data Orchestrator
+Intro: As me mainly being responsible for Data Imports of new customers with specialized requirements, This project was setup and planned by me and worked on this as a Solo Contributor.
+·	Technology:new system from ground-up to replace and decouple data management our main system and move it from RabbitMQ to Kafka to give up on latency and increase through put using multiple Consumer Producer based Worker processing model, with main goal of system to increase throughput of our existing system from 18 Million messages per month to 1 Billion messages per month. System relied primarily Kafka Consumer Producer model and using Kubernetes Keda integration to trigger Workers which were Rust Services and communicated to destinations with gRPC.
+·	Contributions: 
+- I designed the initial Architecture of this system which utilized Workers for Importing/Exporting Data Operations to related Services over gRPC in Micro-Services architecture, where a dedicated Worker would Orchestrate the Tasks as Kafka Topics, which in turn spawned required Importer Workers using Kubernetes Keda integration to import required data in related Topics, which in turn would cause Keda trigger to spawn Importer Workers to perform give operations for specific task with Imported Data.
+- Implemented the complete PoC and brought team of two other Engineers on board once it was decided to be a Sound System to go in production along side our old one.
+
+Reporting System:
+Intro: Lead the project from a PoC to Planning and Architecting the project to make it possible to scale to 1B Req/Month. Lead the small team of two Engineers to bring this project to Production and replace our legacy system.
+·	Technology: A rewrite of our critical system that is used to aggregate usage statistics and other metrics used to create billings for our customers. It was designed to process Billions of Messages and it did perform 1B ingestion in 10mins with TdEngine (TaosDb). It replace old system which took hours and sequential pipelines to aggregate data to process few thousands of messages.
+·	Contributions: 
+- Implemented the PoC to get more insight of a new Db for Time Series data TdEngine (TaosDb).
+ - After success of PoC planned the project keeping our long term requirements in mind.
+ - Setup Architecture and Development Philosophy guide lines for the project.
+ - Lead the small team of two Engineers to implement requirements after collaborating with Product Team.
+
+Algebraic Search:
+Intro: I worked closely with my manager on this project as a team of two Engineers to implement his previous findings on converting predefined length Vectors (Embeddings) into strides for multiple AVX Vectors load per CPU cycle and improved on it by making the algorithm more generalized for any length Vector and processing remaining parts as normal Instruction.
+·	Technology: It was a .NET/C# platform based library to be used as a PoC to integrate as base of our in-house Embeddings Search System. A library to do high performance Math on Vectors to evaluate different available techniques.
+·	Contributions: 
+- Implemented few other PoCs to compare different results for most performance including running Compiled  Assembly Byte code directly in .NET/C# environment in an effort to try to use unimplemented SIMD  operations.
+ - PoC regarding different ways to load Vectors in Memory on .NET platform from .NET Arrays allocations,  Marshaling, Native Platform API calls, Rust based allocators library with binary linking.
+ - PoC on SIMD instructions load and Cache hit strategies.
+ - PoC on different SIMD instructions and relative CPU Cycle latency on different Intel CPU Architectures  avilable in GCP.
+ - PoC on different Pointer Arithmetic in .NET platform with and without unsafe.
+
+CRDT Database
+Intro:  I joined this project in R&D department with a team of two other Engineers. Eventually took over the project after previous Engr. left with on and off support of other Engineers.
+·	Technology: A CRDT (Conflict-free Replicated Data Types) based in house Database. It was a research project to bring a PoC out of R&D department to production to replace MemSQL (SingleStore) and Qdrant Database. Implementation was in Memory using .NET/C# platform.
+·	Contributions: 
+- I took ownership of Observed-Remove Set which was just a normal CRDT which was not being considered for production as Delta Sync on OR-set was not looking feasible. After doing some research I eventually landed on “Efficient Synchronization of State-based CRDTs” paper and implemented Delta OR-set with efficient Sync based on Tombstone. Which turned out to be quite successful and we as a team decided to use OR-set base of our whole System Data Types.
+- Created Strongly Typed Id generation library based on .NET Source Generators for this project, which ended up being adopted for company wide other projects.
+- Created Code Styling/Formatting library as template inspired by Microsoft.CodeAnalysis.CSharp.CodeStyle to use Zero Source committed rules enforcement by just using Nuget package, to be used in all company wide projects and with the help and advice of my colleagues, integrated agreed-upon rules for us all to follow and have easy auto formatting of Code.
+Inquisitor
+Intro: A PoC project to evaluate Qdrant Database as a short term replacement to our production MemSQL (SingleStore). Worked on this as Solor Contributor to eventually have it being adopted by us and then worked on Production Solution with 7 other Engineers. 
+·	Technology: Evaluation of Qdrant Database and use it’s Hierarchical Navigable Small Worlds (HNSW) Search to compare to our existing system.
+·	Contributions: 
+- I researched and evaluated the database with a minimal MVP search system, with a UI to compare search quality and latency.
+- Presented PoC to whole company and with approval of CEO and Manager introduce the Database as short-term replacement of our existing system to Engineering team.
+
+CELUS (Contunity GmbH) Munich, Germany
+Senior Software Engineer
+04/2020 - 03/2022
+Intro: Joined a very fast moving startup environment and collaborated with alot of different stakeholders to bring Team’s mission and vague ideas to fruition in a very chaotic environment, but exactly the kind of place where I shine.
+Lead charge to move old Angular 1.0 application to ReactJS and setup application architecture, guidelines and best practices, including introducing rigorous testing practice in the Organization from Unit Tests to E2E Tests setup.
+Projects:
+
+CELUS Platform
+·	Intro: The Platform was for Electronics Engineers to design and plan electronics projects on web application by choosing abstract concepts as drag and drop, then review concrete results and results to manufacture the actual product. Project also had assets management of electronics components to add to library to be used.
+·	Technology: Project was based on Service oriented Architecture (SoA) with a combination of Sync and Async communication b/w services. Frontend based on ReactJS Typescript with ExpressJS as BFF. Flask as API for Data Layer using MongoDb. Airflow for Task Orchestration and RabbitMQ for Async Communication. Docker Swarm was used to manage services.
+ 
+Frontend: Angular 2, ReactJS, Material UI, Styled-Components, JointJS (RappidJS), TypeScript, Formik, YupJS, Redux, React-i18n, Redux-Saga, Jest, Playwright
+Backend for Frontend: ExpressJS, TypeScript, JoiJS
+Authentication: Keycloak as Auth Proxy
+Backend: Flask, MongoDb, Airflow, RabbitMQ, Minio/S3
+DevOps: Docker Swarm, Portainer, EC2 AWS
+·	Contributions: 
+- Refactored legacy Angular 2 application to ReactJS
+- Setup ReactJS Application with TypeScript and Redux, Redux-Sagas Architechture
+- Refactored existing manual form to Formik with YupJS validation
+- Optimized and simplified the architechture of JointJS (RappidJS) in the main part of the project as schematics library.
+- Architechted the ExpressJS v2 API as Backend for  Frontend with TypeScript, Decorator Pattern and new build system to use latest TypeScript + JavaScript features.
+- Added API required for Frontend feature in Flask backend
+- Simplified and Upgraded Docker Images for Various Services
+- Contributed in overall Architecture and Responsibility Segregation of different backend services
+Xandria
+·	Intro: An internal tool developed during CodeZen (20% Project Time). Main Application was to scrape Internal CodeMD (Hedge Docs) and use it as search engine for it. Later integrated Jira Rest API, CELUS Platform Docs and CELUS Blog through scrapping.
+·	Technology: Project was based on mainly doing web scrapping with Playwright and search setup using ElasticSearch.
+ 
+Frontend: ReactJS, TypeScript, ReactJSS, Jest
+Authentication: Keycloak as Auth Proxy
+Backend: NestJS, PostgreSQL, ElasticSearch
+DevOps: Docker Swarm, Portainer, EC2 AWS
+·	Contributions: 
+- Setup Reverse Proxy based Auth Gateway with Nginx and Keycloak
+- Setup the complete project as personal project during CodeZen (20% Project)
+- Also developed a PoC during the time working on this project to use Keycloak as Auth Proxy Gateway, which after seccessful use on this project later was adopted in all other CodeZen projects and also in the main CELUS Platform.
+
+Local Deployment 
+·	Intro: An internal tool also developed during CodeZen (20% Project Time). Main purpose for the application was to make it easy for any teammate to start working with any Service, without needing the knowledge or setup for all other Services. Application was a Bash Script to run the complete CELUS Platform stack in Docker Swarm, restore Database and allow a Docker Container to connect to Swarm network and allow for that service to run in development mode.
+·	Technology: A Bash Script for useful commands to manage swarm and few Docker Container running in dev mode.
+·	Contributions: 
+- PoC for the ability to connect a Docker Container created with Docker Compose and in development mode like ReactJS Application runnning with Dev Server, with Docker Swarm network. Essentially swapping the Service in Swarm with the Container. This feature enabled us to develop this whole application in the first place.
+- Setup to swap Container for the service by checking the git repo of the service and swapping the correct Service, making it more convinient for everyone to start working with any service within few seconds.
+Terraform Ansible Scripts
+·	Intro: A Terraform Script to setup EC2 Instance on AWS as Dev Machine and using Ansible Script with Terraform to prepare the machine with everything required to Internal Development Stack (Local-Deployment)
+·	Technology: Terraform with Ansible to use EC2 AWS instances.
+·	Contributions: 
+- Initially just developed as personal script to spin up an new instance and cleanup after use. Reason being to use AWS EC2 instances as development machines but also keep jumping to new ones every few days to reduce the chance of security breach, I adopted the service after I noticed few brute force attacks on my previous machine in Auth Logs
+
+
+
+
+Oozou Pvt Ltd. Bangkok, Thailand
+Software Engineer
+04/2019 - 11/2019
+Intro: In a consultancy environment, worked in a small team of three Senior Fullstack Engineers. Directly collaborated with Clients and guided them on Solutions according to their requirements.
+Participated in Client pitch meetings and representing the Firm from the Technical Expertise point.
+Projects:
+
+TrueYou
+·	Intro: Project was a combination of Lading Page and User’s all subscriptions and offer’s management for Thailand’s biggest ISP and VAS provider TrueYou.
+·	Technology: 
+Frontend: ReactJS, NextJS, Moment, SASS
+Backend: NextJS, ExpressJS, Redis
+DevOps: Docker
+·	Contributions: 
+- Improved Project Architecture to Inheritance based component model to batter utilize React’s Atomic paradigm
+- Performed Lighthouse Audits to improve page load time, Lazy Image Load with Intersection API and brotli and gzip based compression for on build time assets
+
+UNIT23 Lahore, Pakistan
+Lead Software Engineer
+12/2015 - 03/2019
+Intro: Joined the company as Senior Engineer and took responsibility of migrating old PHP and EmberJs App to modern ReactJS and NodeJs stack. Eventually taking on the official role of Lead Software Engineer to bring a Team of four Senior Engineers and one Junior Engineer up and running with the new stack from ReactJs, NodeJs to Docker and CircleCI CI/CD setups.
+Projects:
+
+Scheduling+ Web
+·	Intro: A Employee Management System with shifts, tasks, breaks and time off for employees and Sales Projections and number of and types of Employees required for store Managers with Linear Regression for USA’s biggest hardware store chain Ace Hardware, Epicor and Australia’s major Delivery Management System by our parent company MomentTech. We also created 2 different builds for Scheduling+ and Epicor from single source with different themes and logos.
+·	Technology: 
+Frontend: React, Redux, Redux-Saga, Redux-Forms, Redux-Persist, Moment, TypeScript, Backbone, jQuery, GraphQL, REST, ReactJSS
+Backend: Sequelize JS, GraphQL, REST, PHP, MySQL
+DevOps: Docker
+·	Contributions: 
+- Lead the Team to refactor Application with React and NestJS stack with TypeScript
+- Improved tooling with Docker optimistic setup against startup error of containers in Old App
+- Streamlined Team’s dev experience with linting rules, prettier auto fixes and pull requests
+- Introduced Unit Testing with Jest and e2e Testing with Puppeteer
+- Introduced Unit Testing with Jest and e2e Testing with Puppeteer
+- Introduced GraphQL as versioned API for GET
+- Implemented CI/CD with CircleCI
+
+Scheduling+ App (iOS, iPad, Android)
+·	Intro: A limited functionality port of Scheduling+ and Epicor Web App. We created 4 different builds from single source for both platforms iOS and Android for both Scheduling+ and Epicor.
+·	Technology: 
+Frontend: React Native, Redux, Redux-Saga, Redux-Forms, Redux-Persist, Moment, GraphQL, REST, JavaScript, Java, Objective-C
+·	Contributions: 
+- Lead the Team for Cross Platform refactor of an old iOS App
+- Introduced Unit Testing with Jest and e2e Testing with Detox
+- Improved tooling with Fastlane for Screenshots generation, App Signing, Production build and App Publish to iTunesConnect, Android App to Slack and created 2 different App Scheduling+ and Epicor builds were created with different themes and app names (all with one command).
+
+Scheduling+ Timeclock App (iOS, iPad)
+·	Intro: Time-in and Time-out System for Scheduling+ App with Face Detection, PIN Code.
+·	Technology: 
+Fontend: React Native, REST, JavaScript, Objective-C
+·	Contributions: 
+- Maintained and catered Feature Requests to App
+- Improved tooling with Fastlane for Production builds
+Scheduling+ Timeclock App Revamp (iOS, iPad, Android, UWP)
+·	Intro: Revamped with focus on Cross Platform and future Face Recognition features that really pushed us to move away from React Native to Xamarin and OpenCV.
+·	Technology: 
+Fontend: Xamarin Forms, C#, OpenCV C++, Redux.NET, GraphQL, REST
+·	Contributions: 
+- Revamped iOS App to Cross Platform with Xamarin Forms using CQRS Architecture with Redux.NET as solo dev.
+- Implemented Face Detection with OpenCV C++ API using HARR Cascades with C++ Code Interop in Xamarin.iOS, Xamarin.Android and Xamarin.UWP
+
+eConceptions Islamabad, Pakistan
+Associate Software Engineer
+01/2015 - 12/2015 
+Intro: Worked as a Junior Mobile Development Engineer for international clients with two other Senior Engineers.
+Projects:
+
+Marhaba eStore (iOS, Android)
+·	Intro: Online Store for up and coming eCommerce vendor of UAE based in Dubai Marhaba Malls.
+·	Technology: 
+Fontend: React Native, REST
+·	Contributions: 
+- Introduced React Native Stack to replace Ionic as solo
+
+Careem Pitstop
+·	Intro: Driver/Captain App and Admin Web Portal for Middle East and South East Asia’s biggest competitor to Uber called Careem.
+·	Technology: 
+Fontend: Ionic, Angular, TypeScript, CSS, REST
+·	Contributions: 
+- Implemented Native Plugins to improve App responsiveness with Cordova
+- Improved App Animations close to 60fps by using Native List with Cordova Plugins
+
+Exalted Solutions
+·	Intro: eCommerce Store with Google Maps Street View into the Home Decoration store for Pakistan’s Major online solutions provider Exalted Solutions.
+·	Technology: 
+Fontend: jQuery, JavaScript, CSS, REST
+Backend: ASP.NET, C#
+·	Contributions: 
+- Implemented utility methods as jQuery extension methods
+- Improved project structure with refactoring out utility methods and API service
+- Implemented Repository Pattern on the backend
+Tech Overview
+C#, C++, Go, JavaScript/TypeScript
+Backend
+·	ASP.NET Core Stack
+Entity Framework, MVC, MVVM, Redux.NET, Rx.NET, GraphQL, HotChocolate, SQL Server, MySQL, PostgreSQL
+·	Golang Stack
+·	NodeJS Stack
+·	RabbitMQ, Kafka
+·	Airflow
+·	Elasticsearch
+·	CRDTs
+·	GraphQL, gRPC, REST
+Frontend
+·	ReactJS Stack
+Redux, Redux-Saga, Redux-Forms, Formik, React Hook Forms, Styled-Components, ReactJSS, Material UI, MomentsJS, i18n, GraphQL, REST, JestJS, Playwright
+·	NextJS Stack
+·	Angular Stack
+NgRx, RxJS
+·	JointJS (Rappid JS)
+
+DevOps
+·	Docker
+Docker Swarm, Docker Compose
+·	Cloud
+Azure, AWS, GCP, Terraform, Ansible, Portainer, KVM
+·	CI/CD
+Github Action, Gitlab Pipelines, Azure DevOps, Visual Studio App Center, CircleCI
+Mobile
+·	React Native Stack
+Redux, Redux-Saga, Fastlane, Detox
+·	Xamarin Forms Stack
+MVVM, Redux.NET, Platform Architecture
+·	Iconic Stack
+Angular , RxJS, Cordova
+·	OpenCV with C++ API for Face Detection
+OS
+
+·	Debian  Linux (Primary)
+·	Arch, Ubuntu
+·	Windows
+·	Mac
+
+Open Source contributions
+
+·	KurzSharp (link)
+Quick API prototyping Library
+·	Face Detection with OpenCV (link)
+Harr Cascades with C++ API
+ 
+·	SHA256 Cryptographic Processor (link)
+For FPGA using Verilog
+·	React Native Docs Fix/Update (link)
+Added missing Docs for viewabilityConfig
+·	Delta Modulation Wikipedia (link)
+Added Output Signal Power math to display Signal Processing
+·	asm-dom-boilerplate Tooling (link)
+Tooling update for hot reload with Nodemon
+·	Yup, feat: differentiate b/w positive and negative zero (link)
+For a project need to differentiate between 0 and -0, submitted an MR to upstream for this 
+
+Ways in which I waste my time
+
+·	Play Dota 2 more than I should (5117 hrs)
+·	Sci-Fi Theories
+·	History and Nature of Different Languages
+·	Learn about different cultures and impact of Historical event on Societies
+·	History of different Civilizations
+·	Geopolitics
+·	Human Psychology
+·	Philosophy
+·	Quantum Physics, Newtonian Physics
+·	Quantum Physics and its impact on our compute power in perspective of Artificial Intelligence
+
+
+Human Languages:
+
+Fluent:
+·	English
+·	Urdu
+·	Punjabi
+·	Siraiki
+
+Basic :
+·	German 
+
