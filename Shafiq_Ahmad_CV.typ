@@ -88,7 +88,11 @@
 #let jobtitle(body) = block(
   above: 1em,
   below: 1em,
-  text(size: 14pt, weight: "regular", fill: rgb(0, 50, 100), body),
+  {
+    // ATS/PDF scraper hint: hidden label in PDF text layer
+    place(hide(text(size: 0.5pt)[Job Title: ]))
+    text(size: 14pt, weight: "regular", fill: rgb(0, 50, 100), body)
+  },
 )
 
 = Shafiq Ahmad
