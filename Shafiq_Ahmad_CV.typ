@@ -120,24 +120,17 @@
 
 == Summary
 
-Lead Software Engineer with 11+ years designing and delivering billion-scale data infrastructure across four continents. I take systems from R\&D PoC to production — Kafka\/KEDA\/Rust pipelines targeting 1B messages\/month, in-house CRDT databases, and MQTT telemetry validated at 1M msgs\/sec — and lead the cross-functional and customer-facing work that turns them into revenue. 5+ years leading teams; pre-sales \& Developer Advocate experience at GITEX Berlin.
-
-== Selected Impact
-
-- Redesigned data pipeline from #strong[18M to 1B messages\/month] (Kafka + KEDA + Rust workers, gRPC) at Nyris — 50x throughput gain over the previous architecture.
-- Achieved #strong[1B-row ingestion in 10 minutes] on TDengine, replacing a multi-hour legacy reporting pipeline.
-- Validated #strong[1M MQTT msgs\/sec] end-to-end for Siemens Energy renewable-asset telemetry on AWS IoT Core.
-- Drove org-wide adoption of #strong[Delta OR-Set CRDT] (reduced sync payload by ~90%), #strong[Qdrant vector DB] (~60% latency reduction), a Keycloak auth-proxy pattern adopted company-wide, and a shared .NET code-style package.
+#strong[Principal Software Engineer] with #strong[11+ years] designing and delivering billion-scale data infrastructure across four continents. I Architect #strong[Distributed Systems] from R\&D PoC to production. As I redesigned a legacy system data pipeline from #strong[18M to 1B messages\/month] (50x throughput), achieved #strong[1B-row ingestion in 10 minutes] on time-series systems, and validated Power Plants to Private Cloud end-to-end Corporate Data Pipelines, upgraded Vector Search systems to #strong[cut latency by 60%] and #strong[Horizontally Scalable] — and lead the cross-functional and customer-facing work that turns deep Engineering into Revenue. #strong[5+ years Leading Teams]; also #strong[Pre-Sales Engineer \& Developer Advocate] experience.
 
 == Technical Depth
 
-#strong[Languages:] TypeScript\/JavaScript, C\#, Python, Rust, Go, C++
+#text("Languages:", style: "italic") #strong[TypeScript\/JavaScript 10+yrs], #strong[C\# 8+yrs], #strong[Python 2yrs], #strong[Rust 3+yrs], #strong[Go 2+yrs], #strong[C++ 4+yrs]
 
-#strong[Distributed Data:] Kafka, KEDA, gRPC, GraphQL, CRDTs, TDengine, PostgreSQL, MongoDB, Elasticsearch, Qdrant, SIMD\/AVX
+#text("Distributed Data:", style: "italic") Kafka, KEDA, gRPC, GraphQL, CRDTs, TDengine, PostgreSQL, MongoDB, Elasticsearch, Qdrant, SIMD\/AVX
 
-#strong[Platforms:] .NET\/ASP.NET Core, React, Next.js, Node.js, React Native
+#text("Platforms:", style: "italic") .NET\/ASP.NET Core, React, Next.js, Node.js, React Native
 
-#strong[Cloud \& Infra:] Kubernetes, Docker, Terraform, AWS, Azure, GCP, Keycloak
+#text("Cloud & Infra:", style: "italic") Kubernetes, Docker, Terraform, AWS, Azure, GCP, Keycloak
 
 == Experience
 
@@ -180,7 +173,7 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
     - Owned technical strategy for #strong[InterCars onboarding] — the company's largest customer — navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
 
-    - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]), redesigning the pipeline from #strong[18M to 1B messages\/month]. Chose Kafka over RabbitMQ for durability guarantees, accepting higher operational complexity in exchange for 50x throughput gains.
+    - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]) based Actor Model system, redesigning the pipeline from #strong[18M to 1B messages\/month]. Chose Kafka over RabbitMQ for durability guarantees, accepting higher operational complexity in exchange for 50x throughput gains.
 
     - Led a reporting-system rewrite from PoC to production: the #strong[TDengine] pipeline achieved #strong[1B-row ingestion in 10 minutes], replacing a legacy system that took hours. Chose a specialized time-series database for order-of-magnitude performance, mitigating ecosystem limitations with abstraction layers.
 
@@ -237,7 +230,7 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
   [
     #strong[Oozou Pvt Ltd.], Software Engineer
 
-    - Client-facing consultancy. Built and optimized #strong[React\/Next.js] applications for True Corporation (Thailand's largest ISP). Represented the firm in client pitch meetings and as a forward-deployed engineer providing #strong[React Native] expertise for BANPU, one of South-East Asia's largest energy companies.
+    - Client-facing consultancy. Built and optimized #strong[React\/Next.js] applications for True Corporation (Thailand's largest ISP). Represented the firm in client pitch meetings and as a forward-deployed engineer providing #strong[React Native] expertise for BANPU, one of South-East Asia's largest energy companies. Interviewed candidates for Full-Stack Engineer positions.
 
   ],
   [
