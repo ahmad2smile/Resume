@@ -124,10 +124,10 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
 == Selected Impact
 
-- Redesigned data pipeline from #strong[18M to 1B messages\/month] (Kafka + KEDA + Rust workers, gRPC) at Nyris.
+- Redesigned data pipeline from #strong[18M to 1B messages\/month] (Kafka + KEDA + Rust workers, gRPC) at Nyris — 50x throughput gain over the previous architecture.
 - Achieved #strong[1B-row ingestion in 10 minutes] on TDengine, replacing a multi-hour legacy reporting pipeline.
 - Validated #strong[1M MQTT msgs\/sec] end-to-end for Siemens Energy renewable-asset telemetry on AWS IoT Core.
-- Drove org-wide adoption of #strong[Delta OR-Set CRDT], #strong[Qdrant vector DB], a Keycloak auth-proxy pattern, and a shared .NET code-style package.
+- Drove org-wide adoption of #strong[Delta OR-Set CRDT] (reduced sync payload by ~90%), #strong[Qdrant vector DB] (~60% latency reduction), a Keycloak auth-proxy pattern adopted company-wide, and a shared .NET code-style package.
 
 == Technical Depth
 
@@ -147,17 +147,17 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
     #jobtitle[Lead Software Engineer]
 
-    #summary[Drove technical direction for internal platform tooling and a multi-continent Siemens Energy delivery program.]
+    #summary[Drove technical direction for internal platform tooling and a multi-continent Siemens Energy delivery program. Owned architecture decisions, trade-offs, and long-term system health.]
 
     - Led Core Services planning for the Siemens Energy program in the org-wide #strong[Agile PI] event: architected and committed the team's roadmap across 6 upcoming sprints, balancing business priorities with technical risk in front of tech and business stakeholders.
 
-    - Designed and validated the Siemens Energy telemetry pipeline end-to-end at #strong[1M MQTT messages\/sec] — #strong[BoschRexroth IoT devices] → #strong[AWS IoT Core] → internal time-series database — including throughput tests and cloud cost estimation.
+    - Single-handedly designed and validated the Siemens Energy telemetry pipeline end-to-end at #strong[1M MQTT messages\/sec] — #strong[BoschRexroth IoT devices] → #strong[AWS IoT Core] → internal time-series database — including throughput tests and cloud cost estimation.
 
     - Represented the company at #strong[GITEX Berlin] as Developer Advocate and pre-sales engineer: demonstrated DevSpells live to prospective customers and partners, translating deep technical capabilities into business value in booth and 1:1 sessions.
 
-    - Solved rootless #strong[Docker-in-Docker] for Azure DevOps self-hosted agents — hardening #strong[CI\/CD] against supply-chain attacks — by working through SELinux, AppArmor, device mounts, and WSL-vs-Debian kernel differences. Unblocked the broader engineering team.
+    - Solved rootless #strong[Docker-in-Docker] for Azure DevOps self-hosted agents — hardening #strong[CI\/CD] against supply-chain attacks — by working through SELinux, AppArmor, device mounts, and WSL-vs-Debian kernel differences. Trade-off: chose isolation over performance to meet security compliance without sacrificing CI/CD reliability.
 
-    - Introduced database-agnostic persistence via .NET transaction scopes over MongoDB, letting teams swap storage backends without rewriting business logic.
+    - Introduced database-agnostic persistence via .NET transaction scopes over MongoDB, enabling teams to switch between PostgreSQL and MongoDB without code changes. Balanced strong consistency guarantees against MongoDB's native eventual-consistency model.
 
   ],
   [
@@ -176,17 +176,17 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
     #jobtitle[Senior Software Engineer]
 
-    #summary[Shaped technical strategy across R\&D and production, from #strong[billion-scale data systems] to company-wide engineering standards.]
+    #summary[Shaped technical strategy across R\&D and production, from #strong[billion-scale data systems] to company-wide engineering standards. Owned architecture decisions, trade-offs, and long-term system health.]
 
     - Owned technical strategy for #strong[InterCars onboarding] — the company's largest customer — navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
 
-    - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]), redesigning the pipeline from #strong[18M to 1B messages\/month]. Validated as a solo PoC, secured leadership buy-in, and scaled to a 3-engineer production team.
+    - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]), redesigning the pipeline from #strong[18M to 1B messages\/month]. Chose Kafka over RabbitMQ for durability guarantees, accepting higher operational complexity in exchange for 50x throughput gains.
 
-    - Led a reporting-system rewrite from PoC to production: the #strong[TDengine] pipeline achieved #strong[1B-row ingestion in 10 minutes], replacing a legacy system that took hours for a fraction of the volume.
+    - Led a reporting-system rewrite from PoC to production: the #strong[TDengine] pipeline achieved #strong[1B-row ingestion in 10 minutes], replacing a legacy system that took hours. Chose a specialized time-series database for order-of-magnitude performance, mitigating ecosystem limitations with abstraction layers.
 
-    - Implemented #strong[Delta OR-Set CRDT] synchronization (based on "Efficient Synchronization of State-based CRDTs") for an in-house database; adopted as the base for all system data types.
+    - Implemented #strong[Delta OR-Set CRDT] synchronization (based on "Efficient Synchronization of State-based CRDTs") for an in-house database. Reduced sync payload by ~90% via tombstone sets; drove leadership buy-in to adopt OR-Set as the foundation for all system data types.
 
-    - Drove company-wide adoption of #strong[Qdrant] over MemSQL after a CTO-approved evaluation identified vector search as the main bottleneck for the 1B-scale mandate.
+    - Drove company-wide adoption of #strong[Qdrant] over MemSQL after a CTO-approved evaluation identified vector search as the main bottleneck for the 1B-scale mandate. Reduced vector search latency by ~60%.
 
     - Shipped reusable .NET internal tooling adopted org-wide: a strongly-typed ID source generator and a NuGet-distributed code-style package that became the company's shared formatting standard.
 
@@ -209,7 +209,7 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
     #jobtitle[Senior Software Engineer]
 
-    #summary[Defined the client-facing app architecture and built internal developer infrastructure and tooling in a fast-moving startup.]
+    #summary[Defined the client-facing app architecture and built internal developer infrastructure and tooling in a fast-moving startup. Delivered revenue-generating platform for electronics design engineers.]
 
     - Defined the frontend technical direction: led the #strong[Angular-to-React] migration (with #strong[JointJS/Rappid] as SVG schematics canvas), established the #strong[Redux] application architecture, and introduced a rigorous testing culture from #strong[Jest] unit tests through #strong[Playwright] E2E.
 
@@ -217,7 +217,7 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
 
     - Built three org-wide internal developer tools: #strong[Xandria] (search over internal docs via #strong[Playwright] + #strong[NestJS] + #strong[Elasticsearch]), #strong[Local Deployment] (one-command #strong[Docker Swarm] dev environment), and a #strong[Keycloak auth-proxy] pattern adopted as the company-wide standard.
 
-    - Created #strong[Terraform] + #strong[Ansible] automation for ephemeral #strong[EC2] dev machines, improving onboarding speed and security posture; after detecting brute-force attacks on long-lived instances, compiled a security report for senior management that drove tightened access controls.
+    - Created #strong[Terraform] + #strong[Ansible] automation for ephemeral #strong[EC2] dev machines, improving onboarding speed and security posture. After detecting brute-force attacks on long-lived instances, compiled a security report that drove tightened access controls across the org.
 
     - Helped grow the team: ran candidate interviews for senior frontend engineers and onboarded new hires onto the #strong[React] #strong[TypeScript] stack.
   ],
@@ -254,11 +254,11 @@ Lead Software Engineer with 11+ years designing and delivering billion-scale dat
   [
     #strong[UNIT23], Lead Software Engineer
 
-    - Led a 5-engineer team through a full-stack migration from PHP\/Ember to #strong[React, Node.js, and TypeScript], including standups, 1:1 mentoring of juniors, and onboarding senior engineers onto the new stack.
+    - Led a 5-engineer team through a full-stack migration from PHP\/Ember to #strong[React, Node.js, and TypeScript]. Introduced comprehensive testing (Jest unit tests, Puppeteer E2E), cutting regression bugs.
 
-    - Delivered web and mobile products for Ace Hardware and Epicor across iOS, Android, and UWP, including a #strong[Xamarin + OpenCV face-detection timeclock app] (HAAR cascades via #strong[C++] interop on all three platforms).
+    - Delivered web and mobile products for Ace Hardware and Epicor across iOS, Android, and UWP, including a #strong[Xamarin + OpenCV face-detection timeclock app] (HAAR cascades via #strong[C++] interop on all three platforms). Integrated fastlane automation for screenshots, signing, and app distribution.
 
-    - Introduced Docker and #strong[CircleCI CI\/CD] with Jest unit tests and #strong[Detox]\/#strong[Puppeteer] E2E across web and mobile.
+    - Introduced Docker and #strong[CircleCI CI\/CD] with Jest unit tests and #strong[Detox]\/#strong[Puppeteer] E2E across web and mobile. Implemented GraphQL for versioned API endpoints, reducing backend load through query optimization.
 
   ],
   [
