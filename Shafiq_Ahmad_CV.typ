@@ -290,6 +290,10 @@
 
 - Upstream contributions to React Native (docs), yup (SameValue semantics for signed zero), and asm-dom-boilerplate (cross-platform hot reload).
 
+== Agentic Development
+
+Daily practitioner of AI-assisted engineering using #strong[GitHub Copilot], #strong[Claude Code], #strong[OpenCode], and #strong[Pi Agent]. Author personalized skills and agent configurations tailored to personal and work project workflows. Run and operate local models via #strong[llama.cpp], #strong[MLX], and #strong[Ollama] — especially for Ralph Loop kinda scenarios where infinite free tokens come in handy.
+
 == Education
 
 #regular-entry(
