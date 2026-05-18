@@ -51,7 +51,7 @@
   header-photo-width: 3.5cm,
   header-space-below-name: 0.7cm,
   header-space-below-headline: 0.7cm,
-  header-space-below-connections: 0.7cm,
+  header-space-below-connections: 0.2cm,
   header-connections-hyperlink: true,
   header-connections-show-icons: true,
   header-connections-display-urls-instead-of-usernames: false,
@@ -95,10 +95,13 @@
 
 = Shafiq Ahmad
 
-#headline([Lead Software Engineer \& Developer Advocate])
+#headline([Lead Software Engineer])
 
 #connections(
   [#connection-with-icon("location-dot")[Munich, Germany]],
+  [#link("tel:+491607723860", icon: false, if-underline: false, if-color: false)[#connection-with-icon(
+    "phone",
+  )[+49 160 7723860]]],
   [#link("mailto:ahmad2shafiq@icloud.com", icon: false, if-underline: false, if-color: false)[#connection-with-icon(
     "envelope",
   )[ahmad2shafiq\@icloud.com]]],
@@ -120,7 +123,7 @@
 
 #strong[Lead Software Engineer] with #strong[11+ years] architecting billion-scale data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput); achieved #strong[1B-row ingestion in 10 minutes] on a time-series rewrite; cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning on-prem, multi-cloud, IoT (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams]; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
 
-== Technical Depth
+== Skills
 
 #text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript 10+yrs], #strong[C\# 8+yrs], #strong[C++ 4+yrs], #strong[Rust 3+yrs], #strong[Python 2+yrs]
 
@@ -128,7 +131,9 @@
 
 #text("Platforms:", style: "italic", weight: "bold") React.js, Next.js, Node.js, React Native, .NET\/ASP.NET Core, .NET Aspire, Blazor, WebAssembly
 
-#text("Cloud & Infra:", style: "italic", weight: "bold") Kubernetes, Skaffold, Docker, Terraform, Pulumi, AWS, AWS IoT Core, Azure, GCP, Keycloak, OpenTelemetry
+#text("Cloud & Infra:", style: "italic", weight: "bold") Kubernetes, Skaffold, Docker, Terraform, Pulumi, AWS, AWS IoT Core, Azure, GCP, Keycloak
+
+#text("Soft Skills:", style: "italic", weight: "bold") Leadership, Mentoring, Teaching, Stakeholder Management, Cross-functional Collaboration, Public Speaking, Hiring & Interviewing, Agile & Sprint Planning, Conflict Resolution, Negotiation
 
 == Experience
 
@@ -217,8 +222,6 @@
   ],
 )
 
-== Earlier Experience
-
 #regular-entry(
   [
     #strong[Oozou Pvt Ltd.]: Software Engineer, Client-facing consultancy. Built and optimized #strong[React\/Next.js] apps for True Corporation (Thailand's largest ISP); forward-deployed for BANPU (South-East Asia energy) on #strong[React Native]. Interviewed Full-Stack candidates.
@@ -260,10 +263,6 @@
 
 Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #strong[Claude Code], #strong[OpenCode], and #strong[Pi Agent], across #strong[Claude Subscription] and #strong[Local LLM Models]. Continuously evolving workflow built around custom skills, planning agents, and Ralph-loop-style plugins.
 
-== Interests
-
-Enjoy teaching and discussing software engineering, mentorship, and leadership through a human-psychology lens. Frequently complimented for making technical topics approachable to both technical and non-technical audiences.
-
 == Open Source
 
 - #link("https://github.com/ahmad2smile/KurzSharp")[KurzSharp], .NET source-generator library (NuGet) for instant API scaffolding: generates REST, GraphQL, and gRPC endpoints plus a Blazor admin dashboard from annotated models.
@@ -279,9 +278,11 @@ Enjoy teaching and discussing software engineering, mentorship, and leadership t
 #regular-entry(
   [
     #strong[B.Sc. Electronics Engineering]
+
+    University of Engineering and Technology Taxila
   ],
   [
-    Pakistan
+    Taxila, Pakistan
 
     Graduated 2014
   ],
@@ -290,3 +291,7 @@ Enjoy teaching and discussing software engineering, mentorship, and leadership t
 == Languages
 
 #strong[Fluent:] English, Urdu, Punjabi, Siraiki #h(1cm) #strong[Basic:] German
+
+== Interests
+
+Enjoy teaching and discussing software engineering, mentorship, and leadership through a human-psychology lens. Frequently complimented for making technical topics approachable to both technical and non-technical audiences.
