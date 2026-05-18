@@ -5,8 +5,8 @@
 #show: rendercv.with(
   name: "Shafiq Ahmad",
   title: "Shafiq Ahmad - CV",
-  footer: context { [#emph[Shafiq Ahmad -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in May 2026] ],
+  footer: context {},
+  top-note: context {},
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "a4",
@@ -118,21 +118,17 @@
 
 == Summary
 
-#strong[Lead Software Engineer] with #strong[11+ years] architecting billion-scale data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput); achieved #strong[1B-row ingestion in 10 minutes] on a time-series rewrite; cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, on-prem to multi-cloud, IoT (#strong[1M MQTT msg\/sec]) to corporate analytics. #strong[5+ years leading and mentoring teams]; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
+#strong[Lead Software Engineer] with #strong[11+ years] architecting billion-scale data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput); achieved #strong[1B-row ingestion in 10 minutes] on a time-series rewrite; cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning on-prem, multi-cloud, IoT (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams]; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
 
 == Technical Depth
 
-#text("Languages:", style: "italic") #strong[TypeScript\/JavaScript 10+yrs], #strong[C\# 8+yrs], #strong[C++ 4+yrs], #strong[Rust 3+yrs], #strong[Python 2+yrs]
+#text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript 10+yrs], #strong[C\# 8+yrs], #strong[C++ 4+yrs], #strong[Rust 3+yrs], #strong[Python 2+yrs]
 
-#text("Distributed Data:", style: "italic") Kafka, KEDA, gRPC, GraphQL, CRDTs, TDengine, PostgreSQL, MongoDB, Elasticsearch, Qdrant, SIMD\/AVX
+#text("Distributed Data:", style: "italic", weight: "bold") Kafka, KEDA, MQTT, gRPC, GraphQL, CRDTs, TDengine, PostgreSQL, MongoDB, Elasticsearch, Qdrant, SIMD\/AVX
 
-#text("Platforms:", style: "italic") .NET\/ASP.NET Core, React, Next.js, Node.js, React Native
+#text("Platforms:", style: "italic", weight: "bold") React.js, Next.js, Node.js, React Native, .NET\/ASP.NET Core, .NET Aspire, Blazor, WebAssembly
 
-#text("Cloud & Infra:", style: "italic") Kubernetes, Docker, Terraform, Pulumi, AWS, Azure, GCP, Keycloak, OpenTelemetry
-
-== AI-Augmented Engineering
-
-Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #strong[Claude Code], #strong[OpenCode], and #strong[Pi Agent], using Claude Subscription and Local Models. Ever evolving workflow with Skills, Planning and Ralph Loop like custom Plugins.
+#text("Cloud & Infra:", style: "italic", weight: "bold") Kubernetes, Skaffold, Docker, Terraform, Pulumi, AWS, AWS IoT Core, Azure, GCP, Keycloak, OpenTelemetry
 
 == Experience
 
@@ -142,15 +138,19 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 
     #jobtitle[Lead Software Engineer]
 
-    #summary[Drove technical direction for internal platform tooling and a multi-continent Siemens Energy delivery program. Owned architecture decisions, trade-offs, and long-term system health. Led Team for in Siemens Energy #strong[Agile PI] planning event: architected and committed the team's roadmap for 6 upcoming sprints, balancing business priorities with technical risk with tech and business stakeholders.]
+    #summary[Drove technical direction for internal platform tooling and a multi-continent Siemens Energy delivery program. Owned architecture decisions, trade-offs, and long-term system health. Led the team in an #strong[Agile PI] planning event, architecting and committing the team's roadmap for 6 upcoming sprints, balancing business priorities with technical risks.]
 
-    - Designed and validated the Siemens Energy telemetry pipeline end-to-end at #strong[1M MQTT messages\/sec] — #strong[BoschRexroth IoT devices] → #strong[AWS IoT Core] → internal time-series database — including throughput tests and cloud cost estimation.
+    - Designed a data pipeline at #strong[1M MQTT messages\/sec] from #strong[BoschRexroth IoT devices] through #strong[AWS IoT Core] to an internal time-series database, including throughput tests and cloud cost estimation. Owned the data transport and storage layer end-to-end.
 
-    - Extended the Siemens delivery into HMI and legacy integrations: built #strong[Java\/Kotlin] plugins for #strong[Inductive Automation Ignition] and ported a legacy Java time-series DB client (custom stateful transport protocol) to .NET.
+    - Extended the Ignition L2 SCADA, with #strong[Java\/Kotlin] plugins for #strong[Inductive Automation Ignition] and ported a legacy Java Time-Series DB client (custom stateful transport protocol) to .NET.
 
-    - Shaped #strong[DevSpells], an internal platform extending the .NET Aspire model with first-class microservices, multi-cloud, and on-prem deployment support — built on #strong[Pulumi IaC], #strong[OpenTelemetry], gRPC, GraphQL, and #strong[testcontainers] with database-agnostic persistence via .NET transaction scopes over MongoDB, Balanced strong consistency guarantees against MongoDB's native eventual-consistency model.
+    - Automated #strong[CtrlX BoschRexroth] Snap application builds from Windows hosts via #strong[Ubuntu WSL], using it for local development, IoT deployment, certificate provisioning, and integration tests.
 
-    - Solved rootless #strong[Docker-in-Docker] for Azure DevOps self-hosted agents — hardening #strong[CI\/CD] against supply-chain attacks — by working through SELinux, AppArmor, device mounts, and WSL-vs-Debian kernel differences. Trade-off: chose isolation over minimal perf impact to meet security compliance without sacrificing CI/CD reliability.
+    - Authored #strong[Kubernetes] configuration for platform services and #strong[Skaffold]-based remote development setup, enabling engineers fast iteration against real K8s environments.
+
+    - Shaped #strong[DevSpells], an internal platform extending the #strong[.NET Aspire] model with first-class #strong[Microservices], #strong[Multi-Cloud], and #strong[On-Prem deployment] support, built on #strong[Pulumi IaC] with database-agnostic persistence via .NET transaction scopes over #strong[MongoDB].
+
+    - Solved rootless #strong[Docker-in-Docker] for #strong[Azure DevOps] self-hosted agents, hardening against supply-chain attacks, by working through #strong[SELinux], #strong[AppArmor], device mounts, and WSL-vs-Debian kernel differences. Trade-off: accepted a small perf cost for stronger execution isolation to meet security compliance without breaking #strong[CI\/CD] reliability.
 
     - Represented the company at #strong[GITEX Berlin] as Developer Advocate and pre-sales engineer: demonstrated DevSpells live to prospective customers and partners, translating deep technical capabilities into business value in booth and 1:1 sessions.
   ],
@@ -158,8 +158,6 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
     Düsseldorf, Germany
 
     Oct 2024 - present
-
-    \~1.5 years
 
   ],
 )
@@ -170,27 +168,25 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 
     #jobtitle[Senior Software Engineer]
 
-    #summary[Shaped technical strategy across R\&D and production, from #strong[billion-scale data systems] to company-wide engineering standards. Owned architecture decisions, trade-offs, and long-term system health. Mentored Teammates via 1:1s, sprint planning, pair-programming, and collaborative code reviews; established standups, sprints, retrospectives, and an anonymous kudos culture for the team. Also shipped internal tooling and standards to Code Quality.]
+    #summary[Shaped technical strategy across R\&D and production, from #strong[billion-scale data systems] to company-wide engineering standards. Accountable for long-term system health and the architectural trade-offs behind it. Mentored teammates via 1:1s, sprint planning, pair-programming, and collaborative code reviews; established standups, sprints, retrospectives, and an anonymous kudos culture for the team. Also shipped internal tooling and standards for code quality.]
 
-    - Owned technical strategy for #strong[InterCars onboarding] — the company's largest customer — navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
+    - Owned technical strategy for #strong[InterCars onboarding], the company's largest customer, navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
 
     - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]) based Actor Model system, redesigning the pipeline from #strong[18M to 1B messages\/month]. Chose Kafka over RabbitMQ for durability guarantees, accepting higher operational complexity in exchange for 50x throughput gains.
 
-    - Led a reporting-system with #strong[TDengine] time-series Db and achieved #strong[1B-row ingestion in 10 minutes], replacing a legacy system that took hours for fraction of data.
+    - Led a reporting system with #strong[TDengine] time-series DB and achieved #strong[1B-row ingestion in 10 minutes], replacing a legacy system that took hours for a fraction of the data.
 
     - Implemented #strong[Delta OR-Set CRDT] synchronization (based on "Efficient Synchronization of State-based CRDTs") for an in-house database. Reduced sync payload by ~90% via tombstone sets; drove leadership buy-in to adopt OR-Set as the foundation for all system data types.
 
-    - Co-developed a #strong[SIMD\/AVX] vector-stride kernel for embedding similarity search on .NET — generalizing fixed-length kernels to arbitrary-length inputs; benchmarked native allocators, Marshal, and unsafe pointer arithmetic across Intel CPU generations on GCP.
+    - Co-developed a #strong[SIMD\/AVX] vector-stride kernel for embedding similarity search on .NET, generalizing fixed-length kernels to arbitrary-length inputs; benchmarked native allocators, Marshal, and unsafe pointer arithmetic across Intel CPU generations on GCP.
 
-    - Drove company-wide adoption of #strong[Qdrant] over #strong[MemSQL (SingleStore)] after a CTO-approved evaluation identified vector search as the main bottleneck for the 1B-scale mandate. Reduced vector search latency by ~60% and 5x Cost cutting from ~€60,000/year to ~€12,000/year.
+    - Drove company-wide adoption of #strong[Qdrant] over #strong[MemSQL (SingleStore)] after a CTO-approved evaluation identified vector search as the main bottleneck for the 1B-scale mandate. Reduced vector search latency by ~60% and cut cost 5x, from ~€60,000/year to ~€12,000/year.
 
   ],
   [
     Berlin, Germany
 
     Apr 2022 - Oct 2024
-
-    \~2.5 years
 
   ],
 )
@@ -205,7 +201,7 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 
     - Defined the frontend technical direction: led the #strong[Angular-to-React] migration (with #strong[JointJS/Rappid] as SVG schematics canvas), established the #strong[Redux] application architecture, and introduced a rigorous testing culture from #strong[Jest] unit tests through #strong[Playwright] E2E.
 
-    - Architected the #strong[Express\/TypeScript backend-for-frontend] gateway and contributed across #strong[Python] #strong[Flask] #strong[Microservices], #strong[MongoDB], #strong[Airflow], and #strong[RabbitMQ] — shaping service boundaries for the platform.
+    - Architected the #strong[Express\/TypeScript backend-for-frontend] gateway and contributed across #strong[Python] #strong[Flask] #strong[Microservices], #strong[MongoDB], #strong[Airflow], and #strong[RabbitMQ], shaping service boundaries for the platform.
 
     - Built three org-wide internal developer tools: #strong[Xandria] (search over internal docs via #strong[Playwright] + #strong[NestJS] + #strong[Elasticsearch]), #strong[Local Deployment] (one-command #strong[Docker Swarm] dev environment), and a #strong[Keycloak auth-proxy] pattern adopted as the company-wide standard.
 
@@ -218,8 +214,6 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 
     Apr 2020 - Mar 2022
 
-    \~2 years
-
   ],
 )
 
@@ -227,20 +221,18 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 
 #regular-entry(
   [
-    #strong[Oozou Pvt Ltd.], Software Engineer — Client-facing consultancy. Built and optimized #strong[React\/Next.js] apps for True Corporation (Thailand's largest ISP); forward-deployed for BANPU (South-East Asia energy) on #strong[React Native]. Interviewed Full-Stack candidates.
+    #strong[Oozou Pvt Ltd.]: Software Engineer, Client-facing consultancy. Built and optimized #strong[React\/Next.js] apps for True Corporation (Thailand's largest ISP); forward-deployed for BANPU (South-East Asia energy) on #strong[React Native]. Interviewed Full-Stack candidates.
   ],
   [
     Bangkok, Thailand
 
     Apr 2019 - Nov 2019
-
-    \~8 months
   ],
 )
 
 #regular-entry(
   [
-    #strong[UNIT23], Lead Software Engineer
+    #strong[UNIT23]: Lead Software Engineer
 
     - Led a 5-engineer team through a full-stack migration from PHP\/Ember to #strong[React, Node.js, TypeScript]; introduced Jest unit and Puppeteer E2E testing.
 
@@ -250,31 +242,35 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
     Lahore, Pakistan
 
     Dec 2015 - Mar 2019
-
-    \~3.5 years
   ],
 )
 
 #regular-entry(
   [
-    #strong[eConceptions], Associate Software Engineer — Early-career mobile and web engineering across #strong[React Native], #strong[Ionic\/Cordova], and #strong[ASP.NET] for international clients including Careem (ride-hailing) and Marhaba Malls (UAE eCommerce).
+    #strong[eConceptions]: Associate Software Engineer, Early-career mobile and web engineering across #strong[React Native], #strong[Ionic\/Cordova], and #strong[ASP.NET] for international clients including Careem (ride-hailing) and Marhaba Malls (UAE eCommerce).
   ],
   [
     Islamabad, Pakistan
 
     Jan 2015 - Dec 2015
-
-    \~1 year
   ],
 )
 
-== Open Source & Public Work
+== AI-Augmented Engineering
 
-- #link("https://github.com/ahmad2smile/KurzSharp")[KurzSharp] — .NET source-generator library (NuGet) for instant API scaffolding: generates REST, GraphQL, and gRPC endpoints plus a Blazor admin dashboard from annotated models.
+Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #strong[Claude Code], #strong[OpenCode], and #strong[Pi Agent], across #strong[Claude Subscription] and #strong[Local LLM Models]. Continuously evolving workflow built around custom skills, planning agents, and Ralph-loop-style plugins.
 
-- #link("https://github.com/ahmad2smile/Nyris.Crdt")[Nyris.Crdt] — C\# CRDT library with distributed sync via gRPC source generators, implementing OR-sets, LWW registers, and partially replicated registries.
+== Interests
 
-- #link("https://github.com/ahmad2smile/SHA256_Verilog")[SHA256 Verilog] — FPGA implementation of SHA-256 in Verilog (24 stars).
+Enjoy teaching and discussing software engineering, mentorship, and leadership through a human-psychology lens. Frequently complimented for making technical topics approachable to both technical and non-technical audiences.
+
+== Open Source
+
+- #link("https://github.com/ahmad2smile/KurzSharp")[KurzSharp], .NET source-generator library (NuGet) for instant API scaffolding: generates REST, GraphQL, and gRPC endpoints plus a Blazor admin dashboard from annotated models.
+
+- #link("https://github.com/ahmad2smile/Nyris.Crdt")[Nyris.Crdt], C\# CRDT library with distributed sync via gRPC source generators, implementing OR-sets, LWW registers, and partially replicated registries.
+
+- #link("https://github.com/ahmad2smile/SHA256_Verilog")[SHA256 Verilog], FPGA implementation of SHA-256 in Verilog.
 
 - Upstream contributions to React Native (docs), yup (SameValue semantics for signed zero), and asm-dom-boilerplate (cross-platform hot reload).
 
