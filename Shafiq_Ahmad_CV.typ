@@ -125,7 +125,7 @@
 
 == Skills
 
-#text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript 10+yrs], #strong[C\# 8+yrs], #strong[C++ 4+yrs], #strong[Rust 3+yrs], #strong[Python 2+yrs]
+#text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript], #strong[C\#], Rust, Python, C++
 
 #text("Architecture:", style: "italic", weight: "bold") Software Architecture, Distributed Systems, Microservices, Event-Driven Architecture, Actor Model, REST, gRPC, GraphQL, CQRS, CRDTs
 
