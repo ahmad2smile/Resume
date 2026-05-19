@@ -95,7 +95,7 @@
 
 = Shafiq Ahmad
 
-#headline([Principle Software Engineer])
+#headline([Principal Software Engineer])
 
 #connections(
   [#connection-with-icon("location-dot")[Munich, Germany]],
@@ -121,7 +121,7 @@
 
 == Summary
 
-#strong[Principle Software Engineer] and #strong[Software Architect] with #strong[11+ years] designing and shipping #strong[billion-scale distributed systems], #strong[event-driven microservices], and data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput) using an #strong[Actor Model] on Kafka and Kubernetes. Ingested #strong[1 billion rows in 10 minutes] on a time-series rewrite, and cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning #strong[on-prem], #strong[multi-cloud], #strong[IoT] (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams] in #strong[Agile / Scrum] environments; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
+#strong[Principal Software Engineer] and #strong[Software Architect] with #strong[11+ years] designing and shipping #strong[billion-scale distributed systems], #strong[event-driven microservices], and data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput) using an #strong[Actor Model] on Kafka and Kubernetes. Ingested #strong[1 billion rows in 10 minutes] on a time-series rewrite, and cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning #strong[on-prem], #strong[multi-cloud], #strong[IoT] (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams] in #strong[Agile / Scrum] environments; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
 
 == Skills
 
@@ -147,15 +147,15 @@
 
     #summary[Drove technical direction for Deployment Platform and a Siemens Energy Control System. Owned architecture decisions, trade-offs, and long-term system health. Filled in for our Team Manager in #strong[Agile PI] planning, architecting team's roadmap for next sprints while balancing business priorities.]
 
-    - Designed a data pipeline at #strong[1M MQTT messages\/sec] from #strong[BoschRexroth IoT devices] through #strong[AWS IoT Core] to an internal time-series database, including throughput tests and cloud cost estimation. Owned the data transport and storage layer end-to-end.
+    - Designed a data pipeline at #strong[1M MQTT messages\/sec] from #strong[Bosch Rexroth IoT devices] through #strong[AWS IoT Core] to an internal time-series database, including throughput tests and cloud cost estimation. Owned the data transport and storage layer end-to-end.
 
     - Extended the Ignition L2 SCADA, with #strong[Java\/Kotlin] plugins for #strong[Inductive Automation Ignition] and ported a legacy Java Time-Series DB client (custom stateful transport protocol) to .NET.
 
-    - Automated #strong[CtrlX BoschRexroth] Snap application builds from Windows hosts via #strong[Ubuntu WSL], using it for local development, IoT deployment, certificate provisioning, and integration tests.
+    - Automated #strong[CtrlX Bosch Rexroth] Snap application builds from Windows hosts via #strong[Ubuntu WSL], using it for local development, IoT deployment, certificate provisioning, and integration tests.
 
     - Authored #strong[Kubernetes] configuration for platform services and #strong[Skaffold]-based remote development setup, enabling engineers fast iteration against real K8s environments.
 
-    - Shaped #strong[DevSpells], an Deployment Platform extending the #strong[.NET Aspire] model with first-class #strong[Microservices], #strong[Multi-Cloud], and #strong[On-Prem deployment] support, built on #strong[Pulumi IaC] with database-agnostic persistence via .NET transaction scopes over #strong[MongoDB].
+    - Shaped #strong[DevSpells], a Deployment Platform extending the #strong[.NET Aspire] model with first-class #strong[Microservices], #strong[Multi-Cloud], and #strong[On-Prem deployment] support, built on #strong[Pulumi IaC] with database-agnostic persistence via .NET transaction scopes over #strong[MongoDB].
 
     - Solved rootless #strong[Docker-in-Docker] for #strong[Azure DevOps] self-hosted agents, hardening against supply-chain attacks, by working through #strong[SELinux], #strong[AppArmor], device mounts, and WSL-vs-Debian kernel differences. Trade-off: accepted a small perf cost for stronger execution isolation to meet security compliance without breaking #strong[CI\/CD] reliability.
 
@@ -172,7 +172,7 @@
 
     #summary[Shaped technical strategy across R\&D and production, from #strong[billion-scale data systems] to company-wide engineering standards. Accountable for long-term system health and the architectural trade-offs behind it. Mentored teammates via 1:1s, sprint planning, pair-programming, and collaborative code reviews; established standups, sprints, retrospectives, and an anonymous kudos culture for the team. Also shipped internal tooling and standards for code quality.]
 
-    - Owned technical strategy for #strong[InterCars onboarding], the company's largest customer, navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
+    - Owned technical strategy for #strong[Inter Cars onboarding], the company's largest customer, navigating strict security and infrastructure constraints to define the #strong[Kafka]-based data ingestion approach that became the template for subsequent enterprise deals.
 
     - Architected the #strong[Data Orchestrator] (#strong[Kafka] + #strong[KEDA] + #strong[Rust] workers + #strong[gRPC]) based Actor Model system, redesigning the pipeline from #strong[18M to 1B messages\/month]. Chose Kafka over RabbitMQ for durability guarantees, accepting higher operational complexity in exchange for 50x throughput gains.
 
