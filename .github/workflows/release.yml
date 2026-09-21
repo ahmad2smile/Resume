@@ -15,10 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Roboto font
+      - name: Install Roboto font and PDF tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-roboto
+          sudo apt-get install -y fonts-roboto poppler-utils
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v4
@@ -30,11 +30,16 @@ jobs:
           mkdir -p build
           typst compile Shafiq_Ahmad_CV.typ build/Shafiq_Ahmad_CV.pdf
 
+      - name: Build plain text
+        run: pdftotext -layout build/Shafiq_Ahmad_CV.pdf build/Shafiq_Ahmad_CV.txt
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: Shafiq_Ahmad_CV
-          path: build/Shafiq_Ahmad_CV.pdf
+          path: |
+            build/Shafiq_Ahmad_CV.pdf
+            build/Shafiq_Ahmad_CV.txt
 
       - name: Set release tag
         id: tag
@@ -44,7 +49,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
-          name: CV ${{ steps.tag.outputs.tag }}
+          name: ${{ steps.tag.outputs.tag }}
           body: |
             Built from commit ${{ github.sha }}.
-          files: build/Shafiq_Ahmad_CV.pdf
+          files: |
+            build/Shafiq_Ahmad_CV.pdf
+            build/Shafiq_Ahmad_CV.txt
