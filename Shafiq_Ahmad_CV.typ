@@ -95,7 +95,7 @@
 
 = Shafiq Ahmad
 
-#headline([Principal Software Engineer])
+#headline([Lead Software Engineer])
 
 #connections(
   [#connection-with-icon("location-dot")[Munich, Germany]],
@@ -121,7 +121,7 @@
 
 == Summary
 
-#strong[Principal Software Engineer] and #strong[Software Architect] with #strong[11+ years] designing and shipping #strong[billion-scale distributed systems], #strong[event-driven microservices], and data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput) using an #strong[Actor Model] on Kafka and Kubernetes. Ingested #strong[1 billion rows in 10 minutes] on a time-series rewrite, and cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning #strong[on-prem], #strong[multi-cloud], #strong[IoT] (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams] in #strong[Agile / Scrum] environments; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
+#strong[Lead Software Engineer] and #strong[Software Architect] with #strong[11+ years] designing and shipping #strong[billion-scale distributed systems], #strong[event-driven microservices], and data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput) using an #strong[Actor Model] on Kafka and Kubernetes. Ingested #strong[1 billion rows in 10 minutes] on a time-series rewrite, and cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning #strong[on-prem], #strong[multi-cloud], #strong[IoT] (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams] in #strong[Agile / Scrum] environments; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
 
 == Skills
 
