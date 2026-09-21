@@ -123,25 +123,17 @@
 
 #strong[Lead Software Engineer] and #strong[Software Architect] with #strong[11+ years] designing and shipping #strong[billion-scale distributed systems], #strong[event-driven microservices], and data infrastructure across four continents. Redesigned a legacy pipeline from #strong[18M → 1B messages\/month] (50x throughput) using an #strong[Actor Model] on Kafka and Kubernetes. Ingested #strong[1 billion rows in 10 minutes] on a time-series rewrite, and cut vector-search latency by #strong[60%]. End-to-end ownership from R\&D PoC to production, spanning #strong[on-prem], #strong[multi-cloud], #strong[IoT] (#strong[1M MQTT msg\/sec]), and corporate analytics. #strong[5+ years leading and mentoring teams] in #strong[Agile / Scrum] environments; also #strong[Developer Advocate \& Pre-Sales Engineer] (GITEX Berlin).
 
-== Skills
+Contributed to multi-region projects for a #strong[Critical Infrastructure Energy] provider, ensuring scalability, reliability, and operational efficiency, with close collaboration between #strong[Engineering], #strong[DevOps], and #strong[Business Stakeholders]. Also worked in pure #strong[R\&D], reading #strong[Distributed Consensus] and #strong[SHA-256 Cryptography] in #strong[Verilog] papers and implementing them.
 
-#text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript], #strong[C\#], Rust, Python, C++
+Led engineering teams in both #strong[startups] and #strong[large organizations], and equally comfortable designing #strong[system architecture] as debugging performance issues at 3 AM or implementing the tricky parts myself. Motivated by learning and high impact, and thrive in fast-paced environments where #strong[ownership] and #strong[initiative] are encouraged.
 
-#text("Architecture:", style: "italic", weight: "bold") Software Architecture, Distributed Systems, Microservices, Event-Driven Architecture, Actor Model, REST, gRPC, GraphQL, CQRS, CRDTs
-
-#text("Distributed Data:", style: "italic", weight: "bold") Kafka, RabbitMQ, MQTT, TDengine, PostgreSQL, MongoDB, Redis, Elasticsearch, Qdrant, MemSQL\/SingleStore, SIMD\/AVX
-
-#text("Platforms:", style: "italic", weight: "bold") React.js, Next.js, Node.js, React Native, NestJS, Flask, .NET\/ASP.NET Core, Entity Framework
-
-#text("Cloud & Infra:", style: "italic", weight: "bold") Kubernetes, Docker, Terraform, Pulumi, Ansible, AWS, Azure, Azure DevOps, GCP, CI\/CD, GitHub Actions, GitLab CI, OpenTelemetry
-
-#text("Soft Skills:", style: "italic", weight: "bold") Leadership, Mentoring, Teaching, Stakeholder Management, Cross-functional Collaboration, Public Speaking, Hiring & Interviewing, Agile, Scrum, Sprint Planning, Conflict Resolution
+Outside of tinkering with Software & LLM/AI, I enjoy hiking in the Alps and play some DOTA2 whenver I have time.
 
 == Experience
 
 #regular-entry(
   [
-    #strong[AlgoMinds GmbH] #h(0.3cm) #emph[Düsseldorf, Germany] #h(0.3cm) #emph[Oct 2024 - present]
+    #strong[AlgoMinds GmbH] #h(0.3cm) #emph[Düsseldorf, Germany] #h(0.3cm) #emph[Oct 2024 - June 2026]
 
     #jobtitle[Lead Software Engineer]
 
@@ -248,6 +240,22 @@
 
 Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #strong[Claude Code], #strong[OpenCode], and #strong[Pi Agent], across #strong[Claude Subscription] and #strong[Local LLM Models]. Continuously evolving workflow built around custom skills, planning agents, and Ralph-loop-style plugins.
 
+== Skills
+
+#text("Languages:", style: "italic", weight: "bold") #strong[TypeScript\/JavaScript], #strong[C\#], Rust, Python, C++
+
+#text("Architecture:", style: "italic", weight: "bold") Software Architecture, Distributed Systems, Microservices, Event-Driven Architecture, Actor Model, REST, gRPC, GraphQL, CQRS, CRDTs, Distributed Computing, Workflow Orchestration, Data Modeling, Information Architecture, SaaS
+
+#text("Distributed Data:", style: "italic", weight: "bold") Kafka, RabbitMQ, AWS SQS, MQTT, TDengine, PostgreSQL, NoSQL, MongoDB, Redis, Elasticsearch, Qdrant, MemSQL\/SingleStore, SIMD\/AVX
+
+#text("Platforms:", style: "italic", weight: "bold") React.js, Next.js, Node.js, HTML, React Native, NestJS, Flask, .NET\/ASP.NET Core, Entity Framework, Generative AI, Agentic AI, Anthropic, OpenAI, Computer Vision
+
+#text("Cloud & Infra:", style: "italic", weight: "bold") Cloud Native, Kubernetes, Docker, Terraform, Pulumi, Ansible, AWS, Azure, Azure DevOps, GCP, Cloud Security, CI\/CD, GitHub Actions, GitLab CI, Secrets Management, Observability, OpenTelemetry, Grafana
+
+#text("Ways of Working:", style: "italic", weight: "bold") Developer Experience, Prototyping, Test Automation, Agile, Scrum, Sprint Planning
+
+#text("Soft Skills:", style: "italic", weight: "bold") Leadership, Mentoring, Teaching, Stakeholder Management, Cross-functional Collaboration, Public Speaking, Hiring & Interviewing, Conflict Resolution
+
 == Open Source
 
 - #link("https://github.com/ahmad2smile/KurzSharp")[KurzSharp], .NET source-generator library (NuGet) for instant API scaffolding: generates REST, GraphQL, and gRPC endpoints plus a Blazor admin dashboard from annotated models.
@@ -272,7 +280,3 @@ Daily practitioner of AI-assisted engineering with #strong[GitHub Copilot], #str
 == Spoken Languages
 
 #strong[Fluent:] English, Urdu, Punjabi, Siraiki #h(1cm) #strong[Basic:] German
-
-== Interests
-
-Enjoy teaching and discussing software engineering, mentorship, and leadership through a human-psychology lens. Frequently complimented for making technical topics approachable to both technical and non-technical audiences.
