@@ -1,0 +1,50 @@
+name: Build and Release CV
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Roboto font
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-roboto
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: latest
+
+      - name: Build PDF
+        run: |
+          mkdir -p build
+          typst compile Shafiq_Ahmad_CV.typ build/Shafiq_Ahmad_CV.pdf
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shafiq_Ahmad_CV
+          path: build/Shafiq_Ahmad_CV.pdf
+
+      - name: Set release tag
+        id: tag
+        run: echo "tag=cv-$(date -u +'%Y.%m.%d-%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: CV ${{ steps.tag.outputs.tag }}
+          body: |
+            Built from commit ${{ github.sha }}.
+          files: build/Shafiq_Ahmad_CV.pdf
